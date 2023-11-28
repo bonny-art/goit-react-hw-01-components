@@ -1,4 +1,5 @@
-import { Section, Container, Heading } from 'components';
+import { Section, Container, Heading, Profile } from 'components';
+import userData from 'data/user.json';
 
 export const App = () => {
   return (
@@ -7,7 +8,7 @@ export const App = () => {
         <Heading marginBottom="50px" textAlign="center">
           Task 1
         </Heading>
-        {/* <BlogCard article={article} /> */}
+        <Profile data={userData} />
 
         <Heading marginTop="50px" marginBottom="50px" textAlign="center">
           Task 2
