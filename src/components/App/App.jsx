@@ -1,6 +1,14 @@
-import { Section, Container, Heading, Profile, Statistics } from 'components';
+import {
+  Section,
+  Container,
+  Heading,
+  Profile,
+  Statistics,
+  FriendList,
+} from 'components';
 import userData from 'data/user.json';
 import downloadData from 'data/data.json';
+import friendList from 'data/friends.json';
 
 export const App = () => {
   return (
@@ -19,7 +27,7 @@ export const App = () => {
         <Heading marginTop="50px" marginBottom="50px" textAlign="center">
           Task 3
         </Heading>
-        {/* <ForbesList forbesList={forbes} /> */}
+        <FriendList data={friendList} />
 
         <Heading marginTop="50px" marginBottom="50px" textAlign="center">
           Task 4
