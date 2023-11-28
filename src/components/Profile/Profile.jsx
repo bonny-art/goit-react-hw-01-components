@@ -1,11 +1,11 @@
 import {
   Card,
   CardBody,
-  CardHeader,
   CardPoster,
-  CardText,
-  CardTitle,
-  Tag,
+  UserImg,
+  UserName,
+  UserTag,
+  UserLocation,
   StatisticsList,
   StatisticBox,
   StatisticText,
@@ -24,12 +24,12 @@ export const Profile = ({
   return (
     <Card>
       <CardBody>
-        <CardHeader>
-          <CardPoster src={avatar} alt={username} />
-        </CardHeader>
-        <CardTitle>{username}</CardTitle>
-        <Tag>@{tag}</Tag>
-        <CardText>{location}</CardText>
+        <CardPoster>
+          <UserImg src={avatar} alt={username} />
+        </CardPoster>
+        <UserName>{username}</UserName>
+        <UserTag>@{tag}</UserTag>
+        <UserLocation>{location}</UserLocation>
       </CardBody>
 
       <StatisticsList>

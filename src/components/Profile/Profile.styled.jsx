@@ -22,11 +22,11 @@ export const CardBody = styled.div`
   align-items: center;
   gap: ${props => props.theme.spacing(2)};
 
-  padding: ${props => props.theme.spacing(15)}
-    ${props => props.theme.spacing(4)};
+  padding: ${props => props.theme.spacing(15)};
+  margin-bottom: ${props => props.theme.spacing(4)};
 `;
 
-export const CardHeader = styled.div`
+export const CardPoster = styled.div`
   width: ${props => props.theme.spacing(60)};
   height: ${props => props.theme.spacing(60)};
   border-radius: 50%;
@@ -38,18 +38,18 @@ export const CardHeader = styled.div`
   margin-bottom: ${props => props.theme.spacing(6)};
 `;
 
-export const CardPoster = styled.img`
+export const UserImg = styled.img`
   object-fit: cover;
 `;
 
-export const CardTitle = styled.p`
+export const UserName = styled.p`
   font-size: ${props => props.theme.spacing(6)};
   text-transform: capitalize;
 
   margin-bottom: ${props => props.theme.spacing(6)};
 `;
 
-export const Tag = styled.span`
+export const UserTag = styled.span`
   padding: ${props => props.theme.spacing(4)} ${props => props.theme.spacing(8)};
   border-radius: ${props => props.theme.spacing(6)};
   font-size: ${props => props.theme.spacing(4)};
@@ -60,7 +60,7 @@ export const Tag = styled.span`
   margin-bottom: ${props => props.theme.spacing(6)};
 `;
 
-export const CardText = styled.p`
+export const UserLocation = styled.p`
   font-weight: 200;
   letter-spacing: ${props => props.theme.spacing(0.2)};
 
@@ -111,39 +111,4 @@ export const StatisticCounter = styled.span`
   font-size: ${props => props.theme.spacing(8)};
   font-weight: 900;
   color: ${props => props.theme.colors.accent};
-`;
-
-/**
-  |============================
-  | 
-  |============================
-*/
-
-export const CardFooter = styled.div`
-  display: flex;
-  padding: ${props => props.theme.spacing(4)};
-  margin-top: auto;
-`;
-
-export const UserBox = styled.div`
-  display: flex;
-  gap: ${props => props.theme.spacing(2)};
-`;
-
-export const Avatar = styled.img`
-  border-radius: 50%;
-`;
-
-export const UserInfo = styled.div`
-  position: relative;
-`;
-
-export const UserName = styled.h3`
-  font-size: ${props => props.theme.fontSizes.small};
-
-  margin-bottom: ${props => props.theme.spacing(1)};
-`;
-
-export const Date = styled.small`
-  color: ${props => props.theme.colors.gray};
 `;
