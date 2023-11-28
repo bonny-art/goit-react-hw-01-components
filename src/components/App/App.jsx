@@ -6,6 +6,7 @@ import {
   Statistics,
   FriendList,
 } from 'components';
+
 import userData from 'data/user.json';
 import downloadData from 'data/data.json';
 import friendList from 'data/friends.json';
