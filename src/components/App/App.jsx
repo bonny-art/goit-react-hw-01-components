@@ -5,11 +5,13 @@ import {
   Profile,
   Statistics,
   FriendList,
+  TransactionsHistory,
 } from 'components';
 
 import userData from 'data/user.json';
 import downloadData from 'data/data.json';
 import friendList from 'data/friends.json';
+import transactionsHistory from 'data/transactions.json';
 
 export const App = () => {
   return (
@@ -33,7 +35,7 @@ export const App = () => {
         <Heading marginTop="50px" marginBottom="50px" textAlign="center">
           Task 4
         </Heading>
-        {/* <CryptoHistory items={transactions} /> */}
+        <TransactionsHistory data={transactionsHistory} />
       </Container>
     </Section>
   );

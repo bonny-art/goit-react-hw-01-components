@@ -2,10 +2,10 @@ import styled from '@emotion/styled';
 
 export const Friend = styled.li`
   display: flex;
-  gap: ${props => props.theme.spacing(4)};
+  gap: ${props => props.theme.spacing(6)};
   align-items: center;
 
-  padding: 10px 30px 10px 10px;
+  padding: ${props => props.theme.spacing(4)} ${props => props.theme.spacing(6)};
   overflow: hidden;
   border-radius: 10px;
 
@@ -48,7 +48,6 @@ export const Name = styled.p`
   font-size: ${props => props.theme.fontSizes.large};
   letter-spacing: ${props => props.theme.spacing(0.25)};
 
-  margin-left: ${props => props.theme.spacing(2)};
   margin-bottom: 0;
 `;
 
