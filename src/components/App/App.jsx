@@ -1,5 +1,6 @@
-import { Section, Container, Heading, Profile } from 'components';
+import { Section, Container, Heading, Profile, Statistics } from 'components';
 import userData from 'data/user.json';
+import downloadData from 'data/data.json';
 
 export const App = () => {
   return (
@@ -13,7 +14,7 @@ export const App = () => {
         <Heading marginTop="50px" marginBottom="50px" textAlign="center">
           Task 2
         </Heading>
-        {/* <Statistics statsData={statsData} /> */}
+        <Statistics data={downloadData} title="Upload Stats" />
 
         <Heading marginTop="50px" marginBottom="50px" textAlign="center">
           Task 3
