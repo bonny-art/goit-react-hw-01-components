@@ -1,3 +1,5 @@
+import { ProfileItem } from 'components';
+
 import {
   Card,
   CardBody,
@@ -7,20 +9,13 @@ import {
   UserTag,
   UserLocation,
   StatisticsList,
-  StatisticBox,
-  StatisticText,
-  StatisticCounter,
 } from './Profile.styled';
 
 export const Profile = ({
-  data: {
-    username,
-    tag,
-    location,
-    avatar,
-    stats: { followers, views, likes },
-  },
+  data: { username, tag, location, avatar, stats },
 }) => {
+  const statsKeys = Object.keys(stats);
+
   return (
     <Card>
       <CardBody>
@@ -33,18 +28,13 @@ export const Profile = ({
       </CardBody>
 
       <StatisticsList>
-        <StatisticBox>
-          <StatisticText>Followers</StatisticText>
-          <StatisticCounter>{followers}</StatisticCounter>
-        </StatisticBox>
-        <StatisticBox>
-          <StatisticText>Views</StatisticText>
-          <StatisticCounter>{views}</StatisticCounter>
-        </StatisticBox>
-        <StatisticBox>
-          <StatisticText>Likes</StatisticText>
-          <StatisticCounter>{likes}</StatisticCounter>
-        </StatisticBox>
+        {statsKeys.map(statsItem => (
+          <ProfileItem
+            key={statsItem}
+            statsName={statsItem}
+            statsNumber={stats[statsItem]}
+          />
+        ))}
       </StatisticsList>
     </Card>
   );
